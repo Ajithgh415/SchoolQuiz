@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+ {% load static %}
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Result Page</title>
+
+                    <style>
+                    .container1 { 
+        box-shadow: 10px 10px 5px #1ab2ff;
+        border-radius: 25px;
+        background-color: #FFFFFF;
+        border: 3px solid #1ab2ff;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30;
+        
+        padding: 25px;
+        max-width: 400px;
+        min-width: 400px;
+        opacity: 1.0;
+
+        
+    } 
+
+
+
+hh{
+    margin-left:10;}
+ 
+hf{font-size:20;
+    }
+
+hg{font-size:20;
+    font-weight: bold;
+    margin-left:10;}
+ 
+
+
+
+.ali { 
+         font-style: bold;
+         font-family: Times New Roman;
+         
+       }
+
+
+h4{
+   text-shadow: 2px 2px silver;
+    margin: 40px 0px 0px 0px;
+     font-size:30;
+    font-style: bold;
+    text-align: center;
+  font-family: "Times New Roman", Times, serif;
+
+}
+ 
+button { 
+        
+        align-items: center;
+        background-color: #1ab2ff; 
+        width: 60%;
+        color: white; 
+        padding: 15px; 
+        margin: 20px 50px 20px 90px;
+        border: none; 
+        cursor: pointer; 
+         } 
+
+
+
+
+
+
+input[type=text], input[type=password],  input[type=email],  input[type=date] { 
+        width: 80%; 
+        margin: 8px 30px;
+        border: 2px ; 
+        height: 40px;
+        padding: 12px 20px; 
+        display: inline-block; 
+         
+        box-sizing: border-box; 
+    }
+ 
+button:hover { 
+        opacity: 0.7; 
+    } 
+
+body{
+background-size: 100% 100%;
+background-color: #e6fff7}
+
+.logo { 
+        margin-left: 30px;
+        border: 3px solid  #66ffcc;
+        margin-top: 20;
+        margin-bottom: auto;
+       border-radius: 25px;
+        padding-left: 60px;
+        background-color: #ffffff;  
+        max-width: 200px;
+        opacity: 1.0;
+        color: #1ab2ff;
+        box-shadow: 3px 3px ;
+
+        
+    } 
+
+</style>
+                     <script src="{% static 'script.js' %}">
+                </script>
+                   
+                </head>
+                <body>
+                    <div class="logo">
+      <img src="{% static "test1.png" %}" alt="logo";width="60" height="100"; >
+</div><form>
+                    <div class="container1">
+                        
+                        <center><h3>Name&ensp;&ensp; {{ form.studentname }}</h3></a></center>
+                        <center><h3>End Time&ensp;&ensp; {{now2}}</h3></a></center>
+                        <center><h3>Your Score&ensp;&ensp; {{score}}</h3></a></center>
+
+                    </div>
+                </form>
+                    <script src="{% static 'mm.js' %}">
+                </script>
+                <script src="{% static 'mn.js' %}">
+                </script>
+                <script src="{% static 'mo.js' %}">
+                </script>
+                    
+                </body>
+                </html>

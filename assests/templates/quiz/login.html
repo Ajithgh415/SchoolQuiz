@@ -1,0 +1,121 @@
+<!DOCTYPE>
+{% load staticfiles %}
+<html>
+ <head>
+   <title>
+      Login
+   </title>
+
+<style> 
+  Body { 
+         font-style: bold;
+         font-family: Times New Roman;
+         
+         background: url("{% static "bg1.jpg" %}");  
+  background-repeat: no-repeat;
+  background-size: 100% 100%;;
+       }
+
+ 
+button { 
+        background-color: #1ab2ff; 
+
+        width: 70%;
+        color: white; 
+        padding: 15px; 
+        margin: 10px 55px; 
+        border: none; 
+        cursor: pointer; 
+         } 
+
+ h2{font-size:20}
+ form { 
+    } 
+ input[type=text], input[type=password] { 
+
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px #002966; 
+        box-sizing: border-box; 
+    }
+ button:hover { 
+        opacity: 0.7; 
+    } 
+  .cancelbtn { 
+        
+        padding: 10px 18px;
+        margin: 10px 5px;
+    } 
+      
+   
+ .container { 
+        
+        border: 3px solid  #66ffcc;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        margin-right: 730px;
+        margin-left: 130px;
+        padding: 25px;
+        background-color: #FFFFFF;  
+        min-width: 350px;
+        opacity: 1.0;
+         border-radius: 25px;
+        
+    } 
+    .logo { 
+        margin-left: 30px;
+        border: 3px solid  #66ffcc;
+        margin-top: 20;
+        margin-bottom: auto;
+       border-radius: 25px;
+        padding-left: 60px;
+        background-color: #ffffff;  
+        max-width: 200px;
+        opacity: 1.0;
+        color: #1ab2ff;
+        box-shadow: 3px 3px ;
+
+        
+    } 
+    
+</style> 
+
+</head>
+
+<body>
+
+  
+  <div class="logo">
+      <img src="{% static "test1.png" %}" alt="logo";width="60" height="100"; >
+</div>
+ 
+    
+    <form action="" method="POST">
+              {% csrf_token %}
+        <div class="container" >
+ 
+             <h1 align="center"; style="font-family:Arial;color:#ff1a1a;text-shadow: 2px 2px 5px red;"> Institution Login</h1>
+
+            <label><h2>User Name  </h2></label> 
+
+            <input type="text" placeholder="Enter email" name="email" required>
+
+            <label><h2>Password </h2> </label> 
+
+            <input type="password" placeholder="Enter Password" name="password" required>
+            
+            <button type="submit"; align="center"; style="font-size:100%";>Login</button> 
+            
+            
+
+           <center style="color:#ff0000;"> Not a member yet ?<a href="http://127.0.0.1:8000/signup"> join us </a> </center>
+        </div> 
+
+    </form>   
+ 
+
+</body>
+
+</html>

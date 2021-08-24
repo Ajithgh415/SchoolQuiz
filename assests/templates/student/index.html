@@ -1,0 +1,159 @@
+ <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                
+                <title>Leaan AJAX with Django</title>
+                {% load static %}
+               
+                <script src="{% static 'script.js' %}">
+                </script>
+                <style >
+
+                .container1 { 
+        box-shadow: 10px 10px 5px #1ab2ff;
+        border-radius: 25px;
+        background-color: #FFFFFF;
+        border: 3px solid #1ab2ff;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30;
+        
+        padding: 25px;
+        max-width: 400px;
+        min-width: 400px;
+        opacity: 1.0;
+
+        
+    } 
+
+
+
+hh{
+    margin-left:10;}
+ 
+hf{font-size:20;
+    }
+
+hg{font-size:20;
+    font-weight: bold;
+    margin-left:10;}
+ 
+
+
+
+.ali { 
+         font-style: bold;
+         font-family: Times New Roman;
+         
+       }
+
+
+h4{
+   text-shadow: 2px 2px silver;
+    margin: 40px 0px 0px 0px;
+     font-size:30;
+    font-style: bold;
+    text-align: center;
+  font-family: "Times New Roman", Times, serif;
+
+}
+ 
+button { 
+        
+        align-items: center;
+        background-color: #1ab2ff; 
+        width: 60%;
+        color: white; 
+        padding: 15px; 
+        margin: 20px 50px 20px 90px;
+        border: none; 
+        cursor: pointer; 
+         } 
+
+
+
+
+
+
+input[type=text], input[type=password],  input[type=email],  input[type=date] { 
+        width: 80%; 
+        margin: 8px 30px;
+        border: 2px ; 
+        height: 40px;
+        padding: 12px 20px; 
+        display: inline-block; 
+         
+        box-sizing: border-box; 
+    }
+ 
+button:hover { 
+        opacity: 0.7; 
+    } 
+
+body{
+background-size: 100% 100%;
+background-color: #e6fff7}
+
+.logo { 
+        margin-left: 30px;
+        border: 3px solid  #66ffcc;
+        margin-top: 20;
+        margin-bottom: auto;
+       border-radius: 25px;
+        padding-left: 60px;
+        background-color: #ffffff;  
+        max-width: 200px;
+        opacity: 1.0;
+        color: #1ab2ff;
+        box-shadow: 3px 3px ;
+
+        
+    } 
+
+</style>
+            </head>
+            <body>
+                <div class="logo">
+      <img src="{% static "test1.png" %}" alt="logo";width="60" height="100"; >
+</div>
+                <center><h1>Question {{ questions.end_index }} of  {{count}}</h1></center>
+                <div class="container1">
+                            {% for i in questions%}
+                            <h1>{{i.question}}</h1>
+                            <form>
+                                <div class="radio">
+                                <label><input type="radio" name="name"  id="option1" value="{{i.option1}}">{{i.option1}} </label> 
+                                </div>
+                                <div class="radio">
+                                <label > <input type="radio" name="name"  id="option2" value="{{i.option2}}">{{i.option2}}</label>
+                              </div>
+                              <div class="radio">
+                                <label ><input type="radio" name="name" id="option3" value="{{i.option3}}">{{i.option3}}</label>
+                              </div>
+                                <div class="radio">
+                                <label ><input type="radio" name="name"  id="option4" value="{{i.option4}}">{{i.option4}} </label>
+                            </div>
+                        </form>
+                            {%endfor%}
+                            <div class="form-group">
+                                <button class="btn  btn-success" id="save_ans">Submit Answer</button>
+                            </div>
+                            <div class="paginetor">
+                              <div class="form-group">
+                                {%  if questions.has_next %}
+                                <a href="?page={{ questions.next_page_number }}"><button class="btn form-control btn-primary" id="submitAnswer">Next</button></a>
+                              {% else %}
+                               <a href="/result/"><button class="btn form-control btn-success" id="submitAnswer">Submit Quiz</button></a>  
+                              {% endif %} 
+                              </div>
+                             </div>  
+                </div>
+                <script src="{% static 'mm.js' %}">
+                </script>
+                <script src="{% static 'mn.js' %}">
+                </script>
+                <script src="{% static 'mo.js' %}">
+                </script>
+                  
+            </body>
+            </html>       
