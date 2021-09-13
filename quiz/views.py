@@ -66,7 +66,7 @@ def createquiz(request):
 
         CreateQuiz.objects.create(studentname=studentname,dob=dob,email=email, subject=subject,std=std,gender=gender)
         subject = 'TEST GURU QUIZ'
-        message = f'Hi {studentname}, thank you for registering in Test Guru.Your quiz wa ready and your username is email id and password is date of birth. All the best... '
+        message = f'Hi {studentname}, \n\n  Thank you for registering in Test Guru.\n\n  Your quiz was ready\n\n\t\t Username : {email} \n\n\t\t Password : {dob}\n\n   \t All the best... '
         email_from = settings.EMAIL_HOST_USER
         recipient_list = [email, ]
         send_mail( subject, message, email_from, recipient_list )
